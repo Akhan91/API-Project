@@ -19,9 +19,9 @@ async function fetchData() {
         for(let index = 0; index < data.meals.length; index++) {
 
             
-            container.innerHTML += `<a href><ul><li>${data.meals[index].strMeal}</li></ul></a>`;
-            // console.log(data.meals.strMeal);
+            container.innerHTML += `<a href="${data.meals[index].strYoutube}"><ul><li>${data.meals[index].strMeal}</li></ul></a>`;
             console.log(data.meals[index].strMeal);
+
         }
     }
     catch(message) {
