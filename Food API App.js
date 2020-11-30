@@ -17,18 +17,14 @@ async function fetchData() {
         
         
         if (searchInput.value.trim() == "") {
-            container.innerHTML = "<p>Please enter a search!";
+            container.innerHTML = "<p>Please enter a search!</p>";
             return; // Stops the input field from fetching results
         }
         
             container.innerHTML = ''; // Resets the error message and let's new input-field accept a new search
-        
-            
-            // noll-ställer innerHTML vid varje sökning
-            container.innerHTML="";
             for(let index = 0; index < data.meals.length; index++) {
                 
-                // Det som visas på sidan.
+                // The content which appears on the page
                 container.innerHTML += 
                 `<a href="${data.meals[index].strYoutube}">
                 <ul><li>${data.meals[index].strMeal}</li></ul>
@@ -44,3 +40,29 @@ async function fetchData() {
 
 
 
+// addEventListener & function for the random button and searches
+
+searchRandom.addEventListener('click', fetchRandom);
+
+async function fetchRandom() {
+    try {
+        let response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+        let data = await response.json();
+
+        container.innerHTML = ''; // Resets the error message and let's new input-field accept a new search
+        for(let index = 0; index < data.meals.length; index++) {
+
+            container.innerHTML += `<a href="${data.meals[index].strYoutube}">
+            <ul><li>${data.meals[index].strMeal}</li></ul>
+            <img src="${data.meals[index].strMealThumb}">`;
+            
+            console.log(data.meals);
+            console.log(data.meals.strMeal);
+        } 
+
+    }
+    catch(message) {
+        throw new Error(message);
+        
+    }
+}
