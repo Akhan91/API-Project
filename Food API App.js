@@ -19,7 +19,11 @@ async function fetchData() {
         for(let index = 0; index < data.meals.length; index++) {
 
             
-            container.innerHTML += `<a href="${data.meals[index].strYoutube}"><ul><li>${data.meals[index].strMeal}</li></ul></a>`;
+            container.innerHTML += 
+            `<a href="${data.meals[index].strYoutube}">
+            <ul><li>${data.meals[index].strMeal}</li></ul>`;
+
+
             console.log(data.meals[index].strMeal);
 
         }
