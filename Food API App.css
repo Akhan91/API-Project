@@ -1,9 +1,25 @@
-li {
+body {
+    display: flex;
+    
+}
+
+/* #container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+*/    
+
+img li {
     display: flex;
     justify-content:flex-start;
-    margin-left: 45px;
+    margin-left: 40px;
+    font-size: large;
+}
+
+li {
     list-style-type: none;
-    /* font-size: large; */
+
 }
 
 img {
@@ -17,4 +33,8 @@ ul {
 
 #button {
     margin: 5px;
+}
+
+p {
+    color:rgb(241, 71, 71);
 }
