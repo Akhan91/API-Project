@@ -1,11 +1,20 @@
 li {
     display: flex;
-    justify-content: flex-start;
+    justify-content:flex-start;
+    margin-left: 45px;
     list-style-type: none;
     /* font-size: large; */
 }
 
-li img {
-    height: 300px;
-    width: 300px;
+img {
+    height: 250px;
+    width: 250px;
+}
+
+ul {
+    margin-top: 120px;
+}
+
+#button {
+    margin: 5px;
 }
