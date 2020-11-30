@@ -2,7 +2,9 @@
 
 let searchInput     = document.getElementById('input-field');
 let searchButton    = document.getElementById('search-button');
+let searchRandom    = document.getElementById('search-button-random');
 let container       = document.getElementById('main-content');
+
 
 
 
@@ -17,14 +19,16 @@ async function fetchData() {
         for(let index = 0; index < data.meals.length; index++) {
 
             
-            container.innerHTML += `<ul><li>${data.meals[index].strMeal}</li></ul>`;
-            // console.log(data.meals.strMeal);
+            container.innerHTML += `<a href="${data.meals[index].strYoutube}"><ul><li>${data.meals[index].strMeal}</li></ul></a>`;
             console.log(data.meals[index].strMeal);
-        }
-            
 
+        }
     }
     catch(message) {
-        throw new Error(message);
+        throw new Error(container.innerHTML+=`<p>Sorry, no hits!</p>`);
+        
     }
 }
+
+
+
