@@ -7,7 +7,7 @@ let container       = document.getElementById('main-content');
 
 
 
-
+// addEventListener & function for the search-inputs
 searchButton.addEventListener('click', fetchData);
 
 async function fetchData() {
@@ -29,7 +29,6 @@ async function fetchData() {
                 `<a href="${data.meals[index].strYoutube}">
                 <ul><li>${data.meals[index].strMeal}</li></ul>
                 <img src="${data.meals[index].strMealThumb}">`;
-
         }
     }
     catch(message) {
@@ -40,8 +39,7 @@ async function fetchData() {
 
 
 
-// addEventListener & function for the random button and searches
-
+// addEventListener & function for the random button and hits
 searchRandom.addEventListener('click', fetchRandom);
 
 async function fetchRandom() {
@@ -56,8 +54,6 @@ async function fetchRandom() {
             <ul><li>${data.meals[index].strMeal}</li></ul>
             <img src="${data.meals[index].strMealThumb}">`;
             
-            console.log(data.meals);
-            console.log(data.meals.strMeal);
         } 
 
     }
