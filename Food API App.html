@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food API App</title>
     <link rel="stylesheet" href="Food API App.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     <div id="container">
 
-        
-        <h1>Food Ideas!</h1>
-        <input type="text" id="input-field" placeholder="Enter your search">
-        <button id="search-button">Search</button>
-        <button id="search-button-random">Give me a random idea!</button>
+        <div id="static-items">
+            <h1>Food Ideas!</h1>
+            <input type="text" id="input-field" placeholder="Enter your search">
+            <button id="search-button" class="btn btn-light">Search</button>
+            <button id="search-button-random" class="btn btn-light">Give me a random idea!</button>
+        </div>
         
         
         <div id="main-content"></div>
