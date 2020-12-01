@@ -1,4 +1,8 @@
+/* 
 
+The fetched API is https://www.themealdb.com/api.php
+
+*/
 
 let searchInput     = document.getElementById('input-field');
 let searchButton    = document.getElementById('search-button');
